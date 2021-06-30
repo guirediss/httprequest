@@ -1,12 +1,14 @@
 import requests
+import json
 
-resposta = requests.get('https://api.github.com')
+resposta = requests.get('https://api.github.com/users/guirediss')
 
-#print(resposta.status_code)
-
-#dados = resposta.text
+print(resposta.status_code)
 dados = resposta.json()
-print(dados['current_user_url'])
+print(dados['name'])
+print(dados['location'])
+print(dados['company'])
+
 
 
 
